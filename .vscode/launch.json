@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Solution",
+            "type": "node-terminal",
+            "command": "swa start http://localhost:4200 --run \"npm start\" --api-location ..\\api",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/src/spa"
+        },
+        {
+            "name": "Attach to .NET Functions",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:azureFunctions.pickProcess}"
+        }
+    ]
+}
