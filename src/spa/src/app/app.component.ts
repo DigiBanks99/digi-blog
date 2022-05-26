@@ -12,7 +12,8 @@ import {
   styles: [
     `
       .layout {
-        height: 100vh;
+        height: 100%;
+        max-height: 100vh;
         display: grid;
         grid-template-columns: 4fr;
         grid-template-rows: 0.2fr 2.7fr 0.1fr;

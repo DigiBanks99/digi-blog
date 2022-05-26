@@ -1,3 +1,4 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { BodyComponent, BodyComponentModule } from './body.component';
 
@@ -6,7 +7,7 @@ export default <Meta>{
   component: BodyComponent,
   decorators: [
     moduleMetadata({
-      imports: [BodyComponentModule]
+      imports: [BodyComponentModule, RouterTestingModule]
     })
   ]
 };
