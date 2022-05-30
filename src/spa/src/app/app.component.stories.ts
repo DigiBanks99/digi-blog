@@ -1,10 +1,14 @@
 import { RouterTestingModule } from '@angular/router/testing';
-import { Meta, Story } from '@storybook/angular';
+import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { AppComponent, AppComponentModule } from './app.component';
 
 export default <Meta>{
   component: AppComponent,
-  imports: [AppComponentModule, RouterTestingModule]
+  decorators: [
+    moduleMetadata({
+      imports: [AppComponentModule, RouterTestingModule]
+    })
+  ]
 };
 
 export const Primary: Story = () => ({});

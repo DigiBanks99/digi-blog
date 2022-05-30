@@ -1,0 +1,30 @@
+.post-summary {
+  max-width: 25rem;
+  min-width: 25rem;
+  max-height: 10rem;
+  min-height: 10rem;
+  padding: 0.5rem;
+
+  > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+header {
+  h4 {
+    color: var(--bs-primary);
+  }
+
+  p {
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--bs-secondary);
+  }
+}
