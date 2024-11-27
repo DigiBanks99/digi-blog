@@ -1,4 +1,4 @@
-name: Build SPA
+name: CI SPA
 
 on:
   push:
@@ -16,10 +16,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: Build SPA
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [22.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -30,19 +31,19 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-          cache-dependency-path: ./src/spa
+          cache-dependency-path: ./src
       - name: Install packages
         run: npm ci
-        working-directory: ./src/spa
+        working-directory: ./src
       - name: Lint
         run: npm run lint --if-present
-        working-directory: ./src/spa
+        working-directory: ./src
       - name: Build Angular
         run: npm run build --if-present
-        working-directory: ./src/spa
+        working-directory: ./src
       - name: Run tests
         run: npm run test:headless --if-present
-        working-directory: ./src/spa
+        working-directory: ./src
       - name: Build Storybook
         run: npm run build-storybook --if-present
-        working-directory: ./src/spa
+        working-directory: ./src

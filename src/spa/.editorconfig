@@ -1,5 +1,0 @@
-# Editor configuration, see https://editorconfig.org
-root = false
-
-[*.{ts,js}]
-quote_type = single

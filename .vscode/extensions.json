@@ -1,12 +1,8 @@
 {
   "recommendations": [
     "Angular.ng-template",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
     "EditorConfig.EditorConfig",
-    "ms-azuretools.vscode-azurefunctions",
-    "ms-azuretools.vscode-azurestaticwebapps",
-    "ms-dotnettools.csharp",
     "streetsidesoftware.code-spell-checker",
+    "biomejs.biome"
   ]
 }
